@@ -9,5 +9,11 @@
   "keywords": [],
   "author": "rzeczkowskip",
   "license": "MIT",
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "eslint": "^10.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.22.0 || ^10.1.0"
+  }
 }
