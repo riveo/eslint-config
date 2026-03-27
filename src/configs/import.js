@@ -1,19 +1,19 @@
-import importPlugin from 'eslint-plugin-import';
+import { importX } from 'eslint-plugin-import-x';
 
 /**
  * @type {import('eslint').Linter.Config[]}
  */
 export const importConfigs = [
-  importPlugin.flatConfigs.recommended,
+  importX.flatConfigs.recommended,
   {
     rules: {
-      'import/prefer-default-export': 0,
-      'import/no-named-as-default-member': 'error',
-      'import/no-anonymous-default-export': 'error',
-      'import/no-commonjs': 'error',
-      'import/first': 'error',
-      'import/newline-after-import': 'error',
-      'import/order': [
+      'import-x/prefer-default-export': 0,
+      'import-x/no-named-as-default-member': 'error',
+      'import-x/no-anonymous-default-export': 'error',
+      'import-x/no-commonjs': 'error',
+      'import-x/first': 'error',
+      'import-x/newline-after-import': 'error',
+      'import-x/order': [
         'error',
         {
           groups: [
@@ -27,7 +27,7 @@ export const importConfigs = [
           },
         },
       ],
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: [
@@ -38,8 +38,8 @@ export const importConfigs = [
           ],
         },
       ],
-      'import/no-cycle': ['error'],
-      'import/no-duplicates': ['error', { 'prefer-inline': true }],
+      'import-x/no-cycle': ['error'],
+      'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
     },
   },
 ];
