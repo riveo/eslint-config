@@ -8,10 +8,10 @@ import { typescriptConfig } from './configs/typescript.js';
  * @type {import('@eslint/config-helpers').ConfigWithExtendsArray}
  */
 export const recommended = [
-  ...baseConfig,
-  ...importConfigs,
-  ...typescriptConfig,
-  ...typescriptConfigTypeChecked,
-  ...prettierConfig,
-  ...extrasConfig,
+  baseConfig,
+  importConfigs,
+  typescriptConfig,
+  typescriptConfigTypeChecked,
+  prettierConfig,
+  extrasConfig,
 ];
