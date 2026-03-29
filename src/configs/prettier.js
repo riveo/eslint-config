@@ -1,6 +1,9 @@
 import eslintConfigPrettierFlat from 'eslint-config-prettier/flat';
 
 /**
- * @type {import('eslint').Linter.Config[]}
+ * @type {import('@eslint/config-helpers').ConfigWithExtends}
  */
 export const prettierConfig = [eslintConfigPrettierFlat];
+export const prettierConfig = {
+  extends: [eslintConfigPrettierFlat],
+};
