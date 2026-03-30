@@ -2,12 +2,31 @@ import { importX } from 'eslint-plugin-import-x';
 import tseslint from 'typescript-eslint';
 
 /**
+ * @type {import('@eslint/config-helpers').Config}
+ */
+const typescriptImportConfig = {
+  name: 'riveo/typescript-import',
+  rules: {
+    // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
+    'import-x/named': 0,
+    'import-x/namespace': 0,
+    'import-x/default': 0,
+    'import-x/no-named-as-default-member': 0,
+    'import-x/no-unresolved': 0,
+  },
+};
+
+/**
  * @type {import('@eslint/config-helpers').ConfigWithExtends}
  */
 export const typescriptConfig = {
   name: 'riveo/typescript',
-  extends: [tseslint.configs.recommended, tseslint.configs.stylistic],
-
+  extends: [
+    tseslint.configs.recommended,
+    tseslint.configs.stylistic,
+    importX.flatConfigs.typescript,
+    typescriptImportConfig,
+  ],
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -38,14 +57,5 @@ export const typescriptConfigTypeChecked = {
   extends: [
     tseslint.configs.recommendedTypeCheckedOnly,
     tseslint.configs.stylisticTypeCheckedOnly,
-    importX.flatConfigs.typescript,
   ],
-  rules: {
-    // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
-    'import-x/named': 0,
-    'import-x/namespace': 0,
-    'import-x/default': 0,
-    'import-x/no-named-as-default-member': 0,
-    'import-x/no-unresolved': 0,
-  },
 };
