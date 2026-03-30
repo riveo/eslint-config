@@ -5,5 +5,5 @@ import js from '@eslint/js';
  */
 export const baseConfig = {
   name: 'riveo/base',
-  extends: [js.configs.recommended],
+  extends: [{ name: '@eslint/js/recommended', ...js.configs.recommended }],
 };
