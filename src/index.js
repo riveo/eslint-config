@@ -9,13 +9,21 @@ import {
 } from './configs/typescript.js';
 
 /**
- * @type {import('@eslint/config-helpers').ConfigWithExtendsArray}
+ * @type {Object.<string, import('@eslint/config-helpers').ConfigWithExtendsArray>}
  */
-export const recommended = [
-  javascriptConfig,
-  importConfigs,
-  typescriptConfig,
-  typescriptConfigTypeChecked,
-  prettierConfig,
-  extrasConfig,
-];
+export const configs = {
+  recommended: [
+    javascriptConfig,
+    importConfigs,
+    typescriptConfig,
+    typescriptConfigTypeChecked,
+    prettierConfig,
+    extrasConfig,
+  ],
+};
+
+const defaultExport = {
+  configs,
+};
+
+export default defaultExport;
