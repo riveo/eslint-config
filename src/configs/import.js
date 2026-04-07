@@ -10,7 +10,7 @@ export const importConfigs = {
     // in some cases the tseslint parser fails to work with js.
     // switch js files to espree ensures that raw js files doesn't go through
     // ts parser
-    'import/parsers': {
+    'import-x/parsers': {
       espree: ['.js', '.cjs', '.mjs', '.jsx'],
     },
   },
