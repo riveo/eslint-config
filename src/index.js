@@ -1,4 +1,4 @@
-import { baseConfig } from './configs/base.js';
+import { astroConfig } from './configs/astro.js';
 import { extrasConfig } from './configs/extras.js';
 import { importConfigs } from './configs/import.js';
 import { javascriptConfig } from './configs/javascript.js';
@@ -20,6 +20,7 @@ export const configs = {
     prettierConfig,
     extrasConfig,
   ],
+  astro: astroConfig,
 };
 
 const defaultExport = {
