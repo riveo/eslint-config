@@ -13,14 +13,6 @@ export const baseDevDependencies = [
 export const importConfigs = {
   name: 'riveo/import',
   extends: [importX.flatConfigs.recommended],
-  settings: {
-    // in some cases the tseslint parser fails to work with js.
-    // switch js files to espree ensures that raw js files doesn't go through
-    // ts parser
-    'import-x/parsers': {
-      espree: ['.js', '.cjs', '.mjs', '.jsx'],
-    },
-  },
   rules: {
     'import-x/prefer-default-export': 0,
     'import-x/no-named-as-default-member': 'error',
