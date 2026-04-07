@@ -42,7 +42,7 @@ export const importConfigs = {
           '**/*.test.*',
           '**/*.spec.*',
           '**/tests/**',
-          './*.config.*',
+          '*.config.*',
         ],
       },
     ],
