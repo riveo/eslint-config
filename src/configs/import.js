@@ -1,5 +1,12 @@
 import { importX } from 'eslint-plugin-import-x';
 
+export const baseDevDependencies = [
+  '**/*.test.*',
+  '**/*.spec.*',
+  '**/tests/**',
+  '*.config.*',
+];
+
 /**
  * @type {import('@eslint/config-helpers').ConfigWithExtends}
  */
@@ -38,12 +45,7 @@ export const importConfigs = {
     'import-x/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          '**/*.test.*',
-          '**/*.spec.*',
-          '**/tests/**',
-          '*.config.*',
-        ],
+        devDependencies: baseDevDependencies,
       },
     ],
     'import-x/no-cycle': ['error'],
