@@ -1,0 +1,11 @@
+{
+  "name": "@riveo/eslint-config-test-app-recommended",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@riveo/eslint-config": "workspace:*",
+    "@types/node": "^25.5.2",
+    "eslint": "^9.39.4",
+    "typescript": "^6.0.2"
+  }
+}
