@@ -1,2 +1,5 @@
+packages:
+  - tests/apps/*
+
 allowBuilds:
   unrs-resolver: true

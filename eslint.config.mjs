@@ -1,5 +1,14 @@
 // https://notesofdev.com/blog/my-eslint-config
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 import { configs } from './src/index.js';
 
-export default defineConfig(globalIgnores(['var/']), configs.recommended);
+export default defineConfig(
+  {
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  globalIgnores(['var/', 'test-apps/']),
+  configs.recommended,
+);
