@@ -53,7 +53,7 @@ export const typescriptConfig = {
  */
 export const typescriptConfigTypeChecked = {
   name: 'riveo/typescript-type-checked',
-  files: ['**/*.ts', '**/*.tsx'],
+  files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
   extends: [
     tseslint.configs.recommendedTypeCheckedOnly,
     tseslint.configs.stylisticTypeCheckedOnly,
