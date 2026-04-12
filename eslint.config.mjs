@@ -9,6 +9,6 @@ export default defineConfig(
       globals: globals.node,
     },
   },
-  globalIgnores(['var/', 'test-apps/']),
+  globalIgnores(['var/', 'tests/']),
   configs.recommended,
 );
