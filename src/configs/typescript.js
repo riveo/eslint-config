@@ -1,11 +1,14 @@
 import { importX } from 'eslint-plugin-import-x';
-import tseslint from 'typescript-eslint';
+import { configs as tseslint } from 'typescript-eslint';
+
+const typescriptFilesGlobs = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'];
 
 /**
  * @type {import('@eslint/config-helpers').Config}
  */
 const typescriptImportConfig = {
   name: 'riveo/typescript-import',
+  files: typescriptFilesGlobs,
   rules: {
     // https://typescript-eslint.io/troubleshooting/typed-linting/performance/#eslint-plugin-import
     'import-x/named': 0,
@@ -22,8 +25,8 @@ const typescriptImportConfig = {
 export const typescriptConfig = {
   name: 'riveo/typescript',
   extends: [
-    tseslint.configs.recommended,
-    tseslint.configs.stylistic,
+    tseslint.recommended,
+    tseslint.stylistic,
     importX.flatConfigs.typescript,
     typescriptImportConfig,
   ],
@@ -53,9 +56,9 @@ export const typescriptConfig = {
  */
 export const typescriptConfigTypeChecked = {
   name: 'riveo/typescript-type-checked',
-  files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'],
+  files: typescriptFilesGlobs,
   extends: [
-    tseslint.configs.recommendedTypeCheckedOnly,
-    tseslint.configs.stylisticTypeCheckedOnly,
+    tseslint.recommendedTypeCheckedOnly,
+    tseslint.stylisticTypeCheckedOnly,
   ],
 };
