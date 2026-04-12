@@ -53,7 +53,7 @@ describe('recommended config', () => {
       );
 
       assert.strictEqual(
-        result.errorCount,
+        failedRules.length,
         0,
         `Failed smoke validation in ${result.filePath}. Received ${failedRules.join(', ')}`,
       );
