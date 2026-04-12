@@ -6,20 +6,10 @@
  */
 
 export const javascriptTSEslintRules = {
-  "no-array-constructor": "error",
-  "no-unused-expressions": "error",
-  "no-unused-vars": [
-    "error",
-    {
-      "args": "all",
-      "argsIgnorePattern": "^_",
-      "caughtErrors": "all",
-      "caughtErrorsIgnorePattern": "^_",
-      "destructuredArrayIgnorePattern": "^_",
-      "ignoreRestSiblings": true
-    }
-  ],
-  "no-empty-function": "error",
+  "no-var": "error",
+  "prefer-const": "error",
+  "prefer-rest-params": "error",
+  "prefer-spread": "error",
   "no-implied-eval": "error",
   "no-throw-literal": "error",
   "prefer-promise-reject-errors": "error",
