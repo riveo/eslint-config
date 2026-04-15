@@ -6,7 +6,7 @@ const typescriptFilesGlobs = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'];
 /**
  * @type {import('@eslint/config-helpers').Config}
  */
-const typescriptImportConfig = {
+export const typescriptImportConfig = {
   name: 'riveo/typescript-import',
   files: typescriptFilesGlobs,
   rules: {

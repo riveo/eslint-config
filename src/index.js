@@ -1,4 +1,4 @@
-import { astroConfig } from './configs/astro.js';
+import { astroConfig, astroScriptsConfig } from './configs/astro.js';
 import { extrasConfig } from './configs/extras.js';
 import { importConfigs, baseDevDependencies } from './configs/import.js';
 import { javascriptConfig } from './configs/javascript.js';
@@ -20,7 +20,7 @@ export const configs = {
     prettierConfig,
     extrasConfig,
   ],
-  astro: astroConfig,
+  astro: [astroConfig, astroScriptsConfig],
 };
 
 export const extras = {

@@ -9,7 +9,9 @@ export const javascriptTSEslintRules = {
   "no-var": "error",
   "prefer-const": "error",
   "prefer-rest-params": "error",
-  "prefer-spread": "error",
+  "prefer-spread": "error"
+};
+export const javascriptTSEslintTypedRulesInJs = {
   "no-implied-eval": "error",
   "no-throw-literal": "error",
   "prefer-promise-reject-errors": "error",
