@@ -6,5 +6,5 @@ const generators = [
 ];
 
 for (const generator of generators) {
-  import(generator);
+  await import(generator);
 }
