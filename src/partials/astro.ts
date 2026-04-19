@@ -1,10 +1,8 @@
 import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import { configs as astroConfigs } from 'eslint-plugin-astro';
 import { configs as tseslint } from 'typescript-eslint';
+import { astroSharedRules } from './astro-shared-rules.generated.ts';
 import { javascriptTSEslintTypedRulesInJs } from './javascript-tseslint-rules.generated.ts';
-import { javascriptConfig } from './javascript.ts';
-import { typescriptConfig } from './typescript.ts';
-import { extractRules } from '../internal/rule-extractor.ts';
 
 const astroGlob = ['*.astro', '**/*.astro'];
 const astroScriptGlob = [
@@ -21,10 +19,7 @@ const astroScriptGlob = [
 const astroSharedConfig: Config = {
   name: 'riveo/astro-shared-rules',
   files: astroGlob,
-  rules: extractRules([javascriptConfig, typescriptConfig], {
-    filter: (config) =>
-      !!config.files || !!config?.name?.includes('-tseslint-'),
-  }),
+  rules: astroSharedRules,
 };
 
 export const astroConfig: ConfigWithExtends = {

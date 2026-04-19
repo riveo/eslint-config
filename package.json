@@ -18,6 +18,8 @@
     "check:lint": "eslint .",
     "check:format": "prettier --check .",
     "format": "prettier --write .",
+    "codegen:rules": "node scripts/update-generated-rules.ts",
+    "prebuild": "pnpm run codegen:rules",
     "build": "tsc --project ./tsconfig.build.json"
   },
   "keywords": [
