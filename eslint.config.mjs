@@ -1,7 +1,7 @@
 // https://notesofdev.com/blog/my-eslint-config
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
-import { configs, extras } from './src/index.ts';
+import { configs, ruleOptions } from './src/index.ts';
 
 export default defineConfig(
   {
@@ -26,7 +26,7 @@ export default defineConfig(
         'error',
         {
           devDependencies: [
-            ...extras.import.noExtraneousDependencies.baseDevDependencies,
+            ...ruleOptions.importX.noExtraneousDependencies.devDependencies,
             './scripts/*.ts',
           ],
         },

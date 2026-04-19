@@ -22,10 +22,10 @@ export const configs: Record<string, ConfigWithExtendsArray> = {
   astro: [astroConfig, astroScriptsConfig],
 } as const;
 
-export const extras = {
-  import: {
+export const ruleOptions = {
+  importX: {
     noExtraneousDependencies: {
-      baseDevDependencies,
+      devDependencies: baseDevDependencies,
     },
   },
 } as const;

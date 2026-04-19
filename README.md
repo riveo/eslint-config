@@ -126,17 +126,10 @@ The main config for JavaScript and TypeScript projects. It combines:
 
 Additional Astro-specific config. Use it together with `configs.recommended`.
 
-### `extras`
+### `ruleOptions`
 
 Helper values exposed for custom overrides.
-
-Currently this includes:
-
-```js
-extras.import.noExtraneousDependencies.baseDevDependencies
-```
-
-This is useful when extending `import-x/no-extraneous-dependencies` in your own root config.
+This is useful when extending rules with predefined options.
 
 ## Notes
 
