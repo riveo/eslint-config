@@ -109,7 +109,7 @@ export default defineConfig(
 The package exports two values:
 
 - `configs`
-- `extras`
+- `ruleOptions`
 
 ### `configs.recommended`
 
