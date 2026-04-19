@@ -9,6 +9,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "files": [
+    "./dist"
+  ],
   "type": "module",
   "scripts": {
     "pretest": "pnpm run build",
