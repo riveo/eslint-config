@@ -120,7 +120,7 @@ The main config for JavaScript and TypeScript projects. It combines:
 - TypeScript rules
 - typed TypeScript rules
 - Prettier compatibility
-- personal preference rules
+- useful custom rule overrides
 
 ### `configs.astro`
 

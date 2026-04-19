@@ -1,7 +1,7 @@
 {
   "name": "@riveo/eslint-config",
   "version": "0.1.0",
-  "description": "",
+  "description": "Opinionated flat ESLint config for TypeScript-first projects with JavaScript and frameworks support.",
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -28,10 +28,20 @@
   "keywords": [
     "eslint",
     "eslint-config",
-    "eslintconfig"
+    "flat-config",
+    "typescript",
+    "astro",
+    "javascript"
   ],
   "author": "Piotr Rzeczkowski <pr@riveolabs.com>",
-  "homepage": "https://github.com/riveo/eslint-config",
+  "homepage": "https://github.com/riveo/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riveo/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riveo/eslint-config/issues"
+  },
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
   "devDependencies": {
