@@ -19,7 +19,7 @@
     "check:format": "prettier --check .",
     "format": "prettier --write .",
     "codegen:rules": "node scripts/update-generated-rules.ts",
-    "prebuild": "pnpm run codegen:rules",
+    "prebuild": "rimraf dist/ && pnpm run codegen:rules",
     "build": "tsc --project ./tsconfig.build.json"
   },
   "keywords": [
@@ -38,6 +38,7 @@
     "eslint": "^9.39.4",
     "globals": "^17.4.0",
     "prettier": "^3.8.1",
+    "rimraf": "^6.1.3",
     "typescript": "^6.0.2"
   },
   "peerDependencies": {
