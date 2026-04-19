@@ -8,6 +8,10 @@ export const configs: Record<string, ConfigWithExtendsArray> = {
   astro,
 } as const;
 
+/**
+ * Useful reusable rule options. `ruleOptions` provide easy access to options
+ * that have a high probability of being overwritten in the consumer configs.
+ */
 export const ruleOptions = {
   importX: {
     noExtraneousDependencies: {
