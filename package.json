@@ -10,8 +10,11 @@
   "scripts": {
     "pretest": "pnpm run build",
     "test": "node --test",
-    "test:types": "tsc --noEmit",
-    "test:eslint": "eslint",
+    "check": "pnpm run '/^check:.+/'",
+    "check:types": "tsc --noEmit",
+    "check:lint": "eslint .",
+    "check:format": "prettier --check .",
+    "format": "prettier --write .",
     "build": "tsc --project ./tsconfig.build.json"
   },
   "keywords": [
