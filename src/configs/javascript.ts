@@ -1,26 +1,24 @@
+import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import js from '@eslint/js';
 import {
   javascriptTSEslintRules,
   javascriptTSEslintTypedRulesInJs,
-} from './javascript-tseslint-rules.js';
+} from './javascript-tseslint-rules.ts';
 
 const jsExtensions = ['.js', '.cjs', '.mjs', '.jsx'];
 
-export const javascriptTSEslintConfig = {
+export const javascriptTSEslintConfig: ConfigWithExtends = {
   files: jsExtensions.map((ext) => `**/*${ext}`),
   name: 'riveo/javascript-tseslint-restore',
   rules: javascriptTSEslintRules,
 };
 
-export const javascriptTSEslintTypedInJsConfig = {
+export const javascriptTSEslintTypedInJsConfig: Config = {
   name: 'riveo/javascript-tseslint-typed-in-js',
   rules: javascriptTSEslintTypedRulesInJs,
 };
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const javascriptConfig = {
+export const javascriptConfig: ConfigWithExtends = {
   name: 'riveo/javascript',
   extends: [
     { name: '@eslint/js/recommended', ...js.configs.recommended },

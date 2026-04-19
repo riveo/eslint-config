@@ -1,12 +1,10 @@
+import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import { importX } from 'eslint-plugin-import-x';
 import { configs as tseslint } from 'typescript-eslint';
 
 const typescriptFilesGlobs = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'];
 
-/**
- * @type {import('@eslint/config-helpers').Config}
- */
-export const typescriptImportConfig = {
+export const typescriptImportConfig: Config = {
   name: 'riveo/typescript-import',
   files: typescriptFilesGlobs,
   rules: {
@@ -19,10 +17,7 @@ export const typescriptImportConfig = {
   },
 };
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const typescriptConfig = {
+export const typescriptConfig: ConfigWithExtends = {
   name: 'riveo/typescript',
   extends: [
     tseslint.recommended,
@@ -47,14 +42,11 @@ export const typescriptConfig = {
       { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
-    '@typescript-eslint/consistent-type-definitions': 0,
+    '@typescript-eslint/consistent-type-definitions': 'off',
   },
 };
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const typescriptConfigTypeChecked = {
+export const typescriptConfigTypeChecked: ConfigWithExtends = {
   name: 'riveo/typescript-type-checked',
   files: typescriptFilesGlobs,
   extends: [

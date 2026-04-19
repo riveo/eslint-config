@@ -1,3 +1,4 @@
+import type { ConfigWithExtends } from '@eslint/config-helpers';
 import { importX } from 'eslint-plugin-import-x';
 
 export const baseDevDependencies = [
@@ -7,14 +8,11 @@ export const baseDevDependencies = [
   '*.config.*',
 ];
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const importConfigs = {
+export const importConfigs: ConfigWithExtends = {
   name: 'riveo/import',
   extends: [importX.flatConfigs.recommended],
   rules: {
-    'import-x/prefer-default-export': 0,
+    'import-x/prefer-default-export': 'off',
     'import-x/no-named-as-default-member': 'error',
     'import-x/no-anonymous-default-export': 'error',
     'import-x/no-commonjs': 'error',

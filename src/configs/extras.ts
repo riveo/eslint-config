@@ -1,7 +1,6 @@
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const extrasConfig = {
+import type { ConfigWithExtends } from '@eslint/config-helpers';
+
+export const extrasConfig: ConfigWithExtends = {
   name: 'riveo/extras',
   rules: {
     'no-console': ['error', { allow: ['error', 'warn', 'info'] }],

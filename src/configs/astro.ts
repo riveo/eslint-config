@@ -1,9 +1,10 @@
+import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import { configs as astroConfigs } from 'eslint-plugin-astro';
 import { configs as tseslint } from 'typescript-eslint';
-import { javascriptTSEslintTypedRulesInJs } from './javascript-tseslint-rules.js';
-import { javascriptConfig } from './javascript.js';
-import { typescriptConfig } from './typescript.js';
-import { extractRules } from '../helpers/rule-extractor.js';
+import { javascriptTSEslintTypedRulesInJs } from './javascript-tseslint-rules.ts';
+import { javascriptConfig } from './javascript.ts';
+import { typescriptConfig } from './typescript.ts';
+import { extractRules } from '../helpers/rule-extractor.ts';
 
 const astroGlob = ['*.astro', '**/*.astro'];
 const astroScriptGlob = [
@@ -16,21 +17,17 @@ const astroScriptGlob = [
 /**
  * Reapplies the shared JS/TS rule set to Astro frontmatter so `.astro` files
  * behave as close as possible to regular source files.
- *
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
  */
-const astroSharedConfig = {
+const astroSharedConfig: Config = {
   name: 'riveo/astro-shared-rules',
   files: astroGlob,
   rules: extractRules([javascriptConfig, typescriptConfig], {
-    filter: (config) => !!config.files || config?.name?.includes('-tseslint-'),
+    filter: (config) =>
+      !!config.files || !!config?.name?.includes('-tseslint-'),
   }),
 };
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const astroConfig = {
+export const astroConfig: ConfigWithExtends = {
   name: 'riveo/astro',
   extends: [astroConfigs.recommended, astroSharedConfig],
 };
@@ -39,10 +36,8 @@ export const astroConfig = {
  * Astro's client-side processor emits synthetic `*.astro/*.ts` files.
  * These paths are not part of the TS project graph, so typed linting must
  * be disabled for them even when the host app enables project service.
- *
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
  */
-export const astroScriptsConfig = {
+export const astroScriptsConfig: ConfigWithExtends = {
   name: 'riveo/astro-scripts',
   files: astroScriptGlob,
   extends: [tseslint.disableTypeChecked],

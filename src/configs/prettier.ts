@@ -1,9 +1,7 @@
+import type { ConfigWithExtends } from '@eslint/config-helpers';
 import eslintConfigPrettierFlat from 'eslint-config-prettier/flat';
 
-/**
- * @type {import('@eslint/config-helpers').ConfigWithExtends}
- */
-export const prettierConfig = {
+export const prettierConfig: ConfigWithExtends = {
   name: 'riveo/prettier',
   extends: [eslintConfigPrettierFlat],
 };
