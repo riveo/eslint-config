@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import { builtinRules } from 'eslint/use-at-your-own-risk';
+import { extractRules } from '../src/internal/rule-extractor.ts';
 import {
   typescriptConfig,
   typescriptConfigTypeChecked,
-} from '../src/configs/typescript.ts';
-import { extractRules } from '../src/helpers/rule-extractor.ts';
+} from '../src/partials/typescript.ts';
 
 const tsEslintRulesMap = Object.fromEntries(
   Object.entries(typescriptEslintPlugin.rules).flatMap(([ruleName, rule]) => {
@@ -59,11 +59,15 @@ const code = `/*
  * 
  * Do not edit manually.
  */
-import type { Config } from '@eslint/config-helpers';
+import type { RuleConfig } from '@eslint/config-helpers';
 
-export const javascriptTSEslintRules: Config['rules'] = ${JSON.stringify(eslintRecommendedRules, null, 2)};
+export const javascriptTSEslintRules: Record<string, RuleConfig> = ${JSON.stringify(eslintRecommendedRules, null, 2)};
 
-export const javascriptTSEslintTypedRulesInJs: Config['rules'] = ${JSON.stringify(tsEslintAddonRules, null, 2)};
+export const javascriptTSEslintTypedRulesInJs: Record<string, RuleConfig> = ${JSON.stringify(tsEslintAddonRules, null, 2)};
 `;
 
-fs.writeFileSync('./src/configs/javascript-tseslint-rules.ts', code, 'utf8');
+fs.writeFileSync(
+  './src/partials/javascript-tseslint-rules.generated.ts',
+  code,
+  'utf8',
+);

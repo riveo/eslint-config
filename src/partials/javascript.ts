@@ -3,7 +3,7 @@ import js from '@eslint/js';
 import {
   javascriptTSEslintRules,
   javascriptTSEslintTypedRulesInJs,
-} from './javascript-tseslint-rules.ts';
+} from './javascript-tseslint-rules.generated.ts';
 
 const jsExtensions = ['.js', '.cjs', '.mjs', '.jsx'];
 
