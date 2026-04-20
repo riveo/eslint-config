@@ -4,7 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@riveo/eslint-config": "workspace:*",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "eslint": "^9.39.4",
     "globals": "^17.4.0",
     "typescript": "^6.0.2"
