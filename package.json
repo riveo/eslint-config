@@ -23,7 +23,8 @@
     "format": "prettier --write .",
     "codegen:rules": "node scripts/update-generated-rules.ts",
     "prebuild": "rimraf dist/ && pnpm run codegen:rules",
-    "build": "tsc --project ./tsconfig.build.json"
+    "build": "tsc --project ./tsconfig.build.json",
+    "prepublishOnly": "pnpm run check && pnpm run build && pnpm --config.enable-pre-post-scripts=false run test"
   },
   "keywords": [
     "eslint",
