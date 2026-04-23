@@ -6,9 +6,10 @@ updates:
       - tests/apps/**
     schedule:
       interval: weekly
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     versioning-strategy: increase
     groups:
-      patch:
+      non-major:
         update-types:
+          - minor
           - patch
