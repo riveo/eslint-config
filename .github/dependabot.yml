@@ -2,11 +2,20 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: /
+    exclude-paths:
+      - tests/apps/**
     schedule:
       interval: weekly
-    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5
     versioning-strategy: increase
     groups:
-      patch:
+      non-major:
         update-types:
+          - minor
           - patch
+    ignore:
+      - dependency-name: '@types/node'
+        update-types:
+          - version-update:semver-major
