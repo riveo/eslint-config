@@ -1,14 +1,8 @@
 // https://notesofdev.com/blog/my-eslint-config
 import { defineConfig, globalIgnores } from 'eslint/config';
-import globals from 'globals';
 import { configs, ruleOptions } from './src/index.ts';
 
 export default defineConfig(
-  {
-    languageOptions: {
-      globals: globals.node,
-    },
-  },
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
