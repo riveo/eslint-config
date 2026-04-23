@@ -1,5 +1,7 @@
 packages:
   - tests/apps/*
 
+minimumReleaseAge: 1440
+
 allowBuilds:
   unrs-resolver: true

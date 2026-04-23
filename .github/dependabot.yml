@@ -6,6 +6,8 @@ updates:
       - tests/apps/**
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 3
     open-pull-requests-limit: 5
     versioning-strategy: increase
     groups:
