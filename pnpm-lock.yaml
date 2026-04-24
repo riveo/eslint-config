@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@eslint/js':
-        specifier: ^10.0.1
+        specifier: ^9.39.4 || ^10.0.1
         version: 10.0.1(eslint@10.2.1)
       eslint-config-prettier:
         specifier: ^10.1.8
