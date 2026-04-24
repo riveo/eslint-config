@@ -61,10 +61,8 @@
     "@eslint/js": "^10.0.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-import-x": "^4.16.2",
     "typescript-eslint": "^8.59.0"
-  },
-  "optionalDependencies": {
-    "eslint-plugin-astro": "^1.7.0"
   }
 }
