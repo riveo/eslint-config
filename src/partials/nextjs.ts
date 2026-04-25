@@ -1,33 +1,14 @@
-import type { ConfigWithExtends } from '@eslint/config-helpers';
-import { configs as nextConfigs } from '@next/eslint-plugin-next';
+import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
+import nextjsPlugin from '@next/eslint-plugin-next';
+import { globalIgnores } from 'eslint/config';
+
+export const nextjsIgnores: Config = globalIgnores(
+  ['.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
+  'riveo/nextjs-ignores',
+);
 
 export const nextjsConfig: ConfigWithExtends = {
   name: 'riveo/nextjs',
   // core-web-witals already includes recommended set
-  extends: [nextConfigs['core-web-vitals']],
+  extends: [nextjsPlugin.configs['core-web-vitals']],
 };
-//
-// {
-//     name: 'nextjs',
-//     // eslint-disable-next-line import-x/no-named-as-default-member
-//     extends: [next.configs.recommended, next.configs['core-web-vitals']],
-//   },
-//   {
-//     name: 'nextjs-react',
-//
-//     settings: {
-//       react: {
-//         version: 'detect',
-//       },
-//     },
-//
-//     extends: [
-//       react.configs.flat.recommended,
-//       react.configs.flat['jsx-runtime'],
-//       reactHooks.configs.flat.recommended,
-//     ],
-//   },
-//   {
-//     name: 'jsx-a11y',
-//     extends: [jsxA11yConfig.flatConfigs.recommended],
-//   },

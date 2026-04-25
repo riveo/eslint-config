@@ -10,8 +10,14 @@ export const reactConfig: ConfigWithExtends = {
     },
   },
   extends: [
-    reactPlugin.configs.flat.recommended!,
-    reactPlugin.configs.flat['jsx-runtime']!,
-    reactHooksPlugin.configs.flat.recommended,
+    {
+      name: 'react/recommended',
+      ...reactPlugin.configs.flat.recommended!,
+    },
+    { name: 'react/jsx-runtime', ...reactPlugin.configs.flat['jsx-runtime']! },
+    {
+      name: 'react-hooks/recommended',
+      ...reactHooksPlugin.configs.flat.recommended,
+    },
   ],
 };
