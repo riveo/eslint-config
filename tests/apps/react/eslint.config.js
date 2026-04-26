@@ -14,4 +14,11 @@ export default defineConfig([
   },
   configs.recommended,
   configs.react,
+  {
+    settings: {
+      react: {
+        version: '19.0',
+      },
+    },
+  },
 ]);
