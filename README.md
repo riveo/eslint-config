@@ -1,6 +1,6 @@
 # @riveo/eslint-config
 
-Opinionated flat ESLint config for TypeScript-first projects, with support for plain JavaScript and Astro.
+Opinionated flat ESLint config for TypeScript-first projects, with support for plain JavaScript, Astro, React, and Next.js.
 
 This package is extracted from the setup described in the blog post [notesofdev: My optimal ESLint setup](https://notesofdev.com/blog/my-eslint-config), but the package itself is the source of truth.
 
@@ -26,25 +26,21 @@ This package is aimed at projects that want:
   - `no-console` allows `warn`, `error`, and `info`
   - `class-methods-use-this` is disabled
 - Astro support through `configs.astro`
+- Next.js support through `configs.nextjs`
+- React support through `configs.react`
 
 ## Installation
 
 Install the package and ESLint:
 
 ```sh
-pnpm add -D @riveo/eslint-config eslint
+pnpm add -D @riveo/eslint-config eslint@^9
 ```
 
 For TypeScript projects, also make sure `typescript` is installed in your app:
 
 ```sh
 pnpm add -D typescript
-```
-
-For Astro projects, also install:
-
-```sh
-pnpm add -D eslint-plugin-astro
 ```
 
 ## Usage
@@ -125,6 +121,15 @@ The main config for JavaScript and TypeScript projects. It combines:
 ### `configs.astro`
 
 Additional Astro-specific config. Use it together with `configs.recommended`.
+
+### `configs.nextjs`
+
+Additional Next.js-specific config. Use it together with `configs.recommended`.
+It already includes `configs.react`.
+
+### `configs.react`
+
+Additional React-specific config. Use it together with `configs.recommended`.
 
 ### `ruleOptions`
 
