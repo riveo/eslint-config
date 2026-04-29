@@ -1,6 +1,6 @@
 import assert from 'node:assert';
+import { createRequire } from 'node:module';
 import path from 'node:path';
-import { ESLint } from 'eslint';
 
 /**
  * @param {string} appDir
@@ -11,6 +11,8 @@ import { ESLint } from 'eslint';
  * }}
  */
 export const createLintSuite = (appDir) => {
+  const requireFromApp = createRequire(path.join(appDir, 'package.json'));
+  const { ESLint } = requireFromApp('eslint');
   const eslint = new ESLint({
     cwd: appDir,
     cache: false,
