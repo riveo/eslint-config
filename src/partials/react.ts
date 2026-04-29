@@ -1,6 +1,6 @@
-import type { ConfigWithExtends } from '@eslint/config-helpers';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import type { ConfigWithExtends } from '../types.ts';
 
 export const reactConfig: ConfigWithExtends = {
   name: 'riveo/react',

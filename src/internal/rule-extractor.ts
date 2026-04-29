@@ -1,15 +1,12 @@
-import type {
-  Config,
-  ConfigWithExtendsArray,
-  RuleConfig,
-} from '@eslint/config-helpers';
+import type { Linter } from 'eslint';
 import { defineConfig } from 'eslint/config';
+import type { Config, ConfigWithExtendsArray } from '../types.ts';
 
 type Options = {
   filter?: (config: Config) => boolean;
 };
 
-type Rules = Partial<Record<string, RuleConfig>>;
+type Rules = Partial<Linter.RulesRecord>;
 
 export const extractRules = (
   configs: ConfigWithExtendsArray,

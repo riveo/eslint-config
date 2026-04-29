@@ -1,5 +1,5 @@
-import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import js from '@eslint/js';
+import type { Config, ConfigWithExtends } from '../types.ts';
 import {
   javascriptTSEslintRules,
   javascriptTSEslintTypedRulesInJs,

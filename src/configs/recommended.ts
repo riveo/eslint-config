@@ -1,4 +1,3 @@
-import type { ConfigWithExtendsArray } from '@eslint/config-helpers';
 import { importConfigs } from '../partials/import.ts';
 import { javascriptConfig } from '../partials/javascript.ts';
 import { overridesConfig } from '../partials/overrides.ts';
@@ -7,6 +6,7 @@ import {
   typescriptConfig,
   typescriptConfigTypeChecked,
 } from '../partials/typescript.ts';
+import type { ConfigWithExtendsArray } from '../types.ts';
 
 export const recommended: ConfigWithExtendsArray = [
   javascriptConfig,

@@ -1,6 +1,6 @@
-import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import nextjsPlugin from '@next/eslint-plugin-next';
 import { globalIgnores } from 'eslint/config';
+import type { Config, ConfigWithExtends } from '../types.ts';
 
 export const nextjsIgnores: Config = globalIgnores(
   ['.next/**', 'out/**', 'build/**', 'next-env.d.ts'],

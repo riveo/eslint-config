@@ -1,4 +1,4 @@
-import type { Config } from '@eslint/config-helpers';
+import type { Config } from '../types.ts';
 
 export const overridesConfig: Config = {
   name: 'riveo/overrides',

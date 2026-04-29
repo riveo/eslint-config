@@ -55,11 +55,11 @@ const tsEslintAddonRules = Object.fromEntries(
 );
 
 const code = `
-import type { RuleConfig } from '@eslint/config-helpers';
+import type { Linter } from 'eslint';
 
-export const javascriptTSEslintRules: Record<string, RuleConfig> = ${JSON.stringify(eslintRecommendedRules, null, 2)};
+export const javascriptTSEslintRules: Record<string, Linter.RuleSeverity> = ${JSON.stringify(eslintRecommendedRules, null, 2)};
 
-export const javascriptTSEslintTypedRulesInJs: Record<string, RuleConfig> = ${JSON.stringify(tsEslintAddonRules, null, 2)};
+export const javascriptTSEslintTypedRulesInJs: Record<string, Linter.RuleSeverity> = ${JSON.stringify(tsEslintAddonRules, null, 2)};
 `;
 
 writeGeneratedScriptToFile(

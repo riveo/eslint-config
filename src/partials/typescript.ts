@@ -1,6 +1,6 @@
-import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import { importX } from 'eslint-plugin-import-x';
 import { configs as tseslint } from 'typescript-eslint';
+import type { Config, ConfigWithExtends } from '../types.ts';
 
 const typescriptFilesGlobs = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'];
 

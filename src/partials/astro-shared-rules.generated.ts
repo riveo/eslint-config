@@ -5,9 +5,9 @@
  * Do not edit manually.
  */
  
-import type { RuleConfig } from '@eslint/config-helpers';
+import type { Linter } from 'eslint';
 
-export const astroSharedRules: Record<string, RuleConfig> = {
+export const astroSharedRules: Record<string, Linter.RuleSeverity> = {
   "no-var": "error",
   "prefer-const": "error",
   "prefer-rest-params": "error",

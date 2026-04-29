@@ -1,5 +1,5 @@
-import type { ConfigWithExtends } from '@eslint/config-helpers';
 import { importX } from 'eslint-plugin-import-x';
+import type { ConfigWithExtends } from '../types.ts';
 
 export const baseDevDependencies = [
   '**/*.test.*',

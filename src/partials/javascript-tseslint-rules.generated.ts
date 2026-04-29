@@ -5,16 +5,16 @@
  * Do not edit manually.
  */
  
-import type { RuleConfig } from '@eslint/config-helpers';
+import type { Linter } from 'eslint';
 
-export const javascriptTSEslintRules: Record<string, RuleConfig> = {
+export const javascriptTSEslintRules: Record<string, Linter.RuleSeverity> = {
   "no-var": "error",
   "prefer-const": "error",
   "prefer-rest-params": "error",
   "prefer-spread": "error"
 };
 
-export const javascriptTSEslintTypedRulesInJs: Record<string, RuleConfig> = {
+export const javascriptTSEslintTypedRulesInJs: Record<string, Linter.RuleSeverity> = {
   "no-implied-eval": "error",
   "no-throw-literal": "error",
   "prefer-promise-reject-errors": "error",

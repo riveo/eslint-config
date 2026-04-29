@@ -10,9 +10,9 @@ const rules = extractRules([javascriptConfig, typescriptConfig], {
 });
 
 const code = `
-import type { RuleConfig } from '@eslint/config-helpers';
+import type { Linter } from 'eslint';
 
-export const astroSharedRules: Record<string, RuleConfig> = ${JSON.stringify(rules, null, 2)};
+export const astroSharedRules: Record<string, Linter.RuleSeverity> = ${JSON.stringify(rules, null, 2)};
 `;
 
 writeGeneratedScriptToFile(

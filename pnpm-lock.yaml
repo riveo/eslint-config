@@ -42,9 +42,6 @@ importers:
         specifier: ^8.59.0
         version: 8.59.0(eslint@9.39.4)(typescript@6.0.3)
     devDependencies:
-      '@eslint/config-helpers':
-        specifier: ^0.4.2
-        version: 0.4.2
       '@types/eslint-plugin-jsx-a11y':
         specifier: ^6.10.1
         version: 6.10.1

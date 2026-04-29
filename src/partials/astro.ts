@@ -1,6 +1,6 @@
-import type { Config, ConfigWithExtends } from '@eslint/config-helpers';
 import { configs as astroConfigs } from 'eslint-plugin-astro';
 import { configs as tseslint } from 'typescript-eslint';
+import type { Config, ConfigWithExtends } from '../types.ts';
 import { astroSharedRules } from './astro-shared-rules.generated.ts';
 import { javascriptTSEslintTypedRulesInJs } from './javascript-tseslint-rules.generated.ts';
 
