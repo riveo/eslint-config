@@ -17,9 +17,7 @@ describe('react config', () => {
     testExpectedFailures({
       'src/fail/react/jsx-key.tsx': ['react/jsx-key'],
       'src/fail/react/jsx-no-target-blank.tsx': ['react/jsx-no-target-blank'],
-      'src/fail/react-hooks/rules-of-hooks.tsx': [
-        'react-hooks/rules-of-hooks',
-      ],
+      'src/fail/react-hooks/rules-of-hooks.tsx': ['react-hooks/rules-of-hooks'],
       'src/fail/jsx-a11y/alt-text.tsx': ['jsx-a11y/alt-text'],
     }),
   );
