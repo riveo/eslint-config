@@ -24,7 +24,11 @@ const astroSharedConfig: Config = {
 
 export const astroConfig: ConfigWithExtends = {
   name: 'riveo/astro',
-  extends: [astroConfigs.recommended, astroSharedConfig],
+  extends: [
+    astroConfigs.recommended,
+    astroConfigs['jsx-a11y-recommended'],
+    astroSharedConfig,
+  ],
 };
 
 /**

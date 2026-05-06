@@ -12,6 +12,7 @@ describe('astro config', () => {
     testSmokeFiles([
       'src/smoke/virtual-module.astro',
       'src/smoke/client-script.astro',
+      'src/smoke/jsx-a11y.astro',
     ]),
   );
 
