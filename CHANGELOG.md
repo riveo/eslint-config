@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Fix jsx-a11y rules in Astro config
+
 ## 0.2.1
 
 - Fix missing `@typescript-eslint/parser` dependency
