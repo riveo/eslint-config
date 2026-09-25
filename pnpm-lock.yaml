@@ -259,6 +259,9 @@ importers:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
     devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^16.3.6
+        version: 16.3.6(eslint@9.39.5(supports-color@7.2.0))
       '@riveo/eslint-config':
         specifier: workspace:*
         version: link:../../..
@@ -274,6 +277,15 @@ importers:
       eslint:
         specifier: ^9
         version: 9.39.5(supports-color@7.2.0)
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.10.2
+        version: 6.10.2(eslint@9.39.5(supports-color@7.2.0))
+      eslint-plugin-react:
+        specifier: ^7.37.5
+        version: 7.37.5(eslint@9.39.5(supports-color@7.2.0))
+      eslint-plugin-react-hooks:
+        specifier: ^7.1.1
+        version: 7.1.1(eslint@9.39.5(supports-color@7.2.0))(supports-color@7.2.0)
       typescript:
         specifier: ^5
         version: 5.9.3
@@ -305,6 +317,15 @@ importers:
       eslint:
         specifier: ^9.39.4
         version: 9.39.5(supports-color@7.2.0)
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.10.2
+        version: 6.10.2(eslint@9.39.5(supports-color@7.2.0))
+      eslint-plugin-react:
+        specifier: ^7.37.5
+        version: 7.37.5(eslint@9.39.5(supports-color@7.2.0))
+      eslint-plugin-react-hooks:
+        specifier: ^7.1.1
+        version: 7.1.1(eslint@9.39.5(supports-color@7.2.0))(supports-color@7.2.0)
       typescript:
         specifier: ~6.0.2
         version: 6.0.3

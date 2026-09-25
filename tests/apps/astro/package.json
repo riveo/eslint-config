@@ -18,6 +18,8 @@
   "devDependencies": {
     "@riveo/eslint-config": "workspace:*",
     "eslint": "^9.39.4",
+    "eslint-plugin-astro": "^3.2.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "typescript": "^5.9.3"
   }
 }
