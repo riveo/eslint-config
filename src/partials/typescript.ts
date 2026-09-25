@@ -54,3 +54,8 @@ export const typescriptConfigTypeChecked: ConfigWithExtends = {
     tseslint.stylisticTypeCheckedOnly,
   ],
 };
+
+export const typescriptDisableTypeChecked: ConfigWithExtends = {
+  name: 'riveo/typescript-disable-type-checked',
+  extends: [tseslint.disableTypeChecked],
+};

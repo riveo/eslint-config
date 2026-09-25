@@ -6,6 +6,7 @@ import { prettierConfig } from '../partials/prettier.ts';
 import {
   typescriptConfig,
   typescriptConfigTypeChecked,
+  typescriptDisableTypeChecked,
 } from '../partials/typescript.ts';
 
 export const recommended = defineConfig(
@@ -16,3 +17,5 @@ export const recommended = defineConfig(
   prettierConfig,
   overridesConfig,
 );
+
+export const disableTypeChecked = defineConfig(typescriptDisableTypeChecked);
