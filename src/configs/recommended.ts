@@ -1,3 +1,4 @@
+import { defineConfig } from 'eslint/config';
 import { importConfigs } from '../partials/import.ts';
 import { javascriptConfig } from '../partials/javascript.ts';
 import { overridesConfig } from '../partials/overrides.ts';
@@ -6,13 +7,12 @@ import {
   typescriptConfig,
   typescriptConfigTypeChecked,
 } from '../partials/typescript.ts';
-import type { ConfigWithExtendsArray } from '../types.ts';
 
-export const recommended: ConfigWithExtendsArray = [
+export const recommended = defineConfig(
   javascriptConfig,
   importConfigs,
   typescriptConfig,
   typescriptConfigTypeChecked,
   prettierConfig,
   overridesConfig,
-];
+);

@@ -7,5 +7,3 @@ export type Config = Linter.Config;
 export type ConfigWithExtends = Linter.Config & {
   extends?: InfiniteArray<Config>[];
 };
-
-export type ConfigWithExtendsArray = InfiniteArray<ConfigWithExtends>[];

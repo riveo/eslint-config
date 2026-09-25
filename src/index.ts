@@ -3,14 +3,13 @@ import { nextjs } from './configs/nextjs.ts';
 import { react } from './configs/react.ts';
 import { recommended } from './configs/recommended.ts';
 import { baseDevDependencies } from './partials/import.ts';
-import type { ConfigWithExtendsArray } from './types.ts';
 
 export const configs = {
   recommended,
   astro,
   nextjs,
   react,
-} as const satisfies Record<string, ConfigWithExtendsArray>;
+} as const;
 
 /**
  * Useful reusable rule options. `ruleOptions` provide easy access to options
