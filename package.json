@@ -45,6 +45,9 @@
   },
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
   "devDependencies": {
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^24.12.2",

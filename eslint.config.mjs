@@ -33,4 +33,10 @@ export default defineConfig(
       ],
     },
   },
+  {
+    files: ['src/index.ts'],
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'off',
+    },
+  },
 );
