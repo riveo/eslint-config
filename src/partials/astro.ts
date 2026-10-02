@@ -1,3 +1,4 @@
+import { fixupConfigRules } from '@eslint/compat';
 import { configs as astroConfigs } from 'eslint-plugin-astro';
 import { configs as tseslint } from 'typescript-eslint';
 import type { Config, ConfigWithExtends } from '../types.ts';
@@ -24,11 +25,13 @@ const astroSharedConfig: Config = {
 
 export const astroConfig: ConfigWithExtends = {
   name: 'riveo/astro',
-  extends: [
-    astroConfigs.recommended,
-    astroConfigs['jsx-a11y-recommended'],
+  extends: fixupConfigRules([
+    ...astroConfigs['flat/recommended'],
+    ...astroConfigs['flat/jsx-a11y-recommended'].map((c) =>
+      c.name ? c : { ...c, name: 'astro/jsx-a11y-recommended' },
+    ),
     astroSharedConfig,
-  ],
+  ]),
 };
 
 /**
