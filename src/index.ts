@@ -9,28 +9,37 @@ export const configs = {
   recommended,
   disableTypeChecked,
   get astro() {
-    const config =
-      require('./configs/astro.js') as typeof import('./configs/astro.js');
+    ensurePackagesAreInstalled([
+      'eslint-plugin-astro',
+      'eslint-plugin-jsx-a11y',
+    ]);
 
-    ensurePackagesAreInstalled(config.requiredPackages);
-
-    return config.astro;
+    return (
+      require('./configs/astro.js') as typeof import('./configs/astro.js')
+    ).astro;
   },
   get nextjs() {
-    const config =
-      require('./configs/nextjs.js') as typeof import('./configs/nextjs.js');
+    ensurePackagesAreInstalled([
+      '@next/eslint-plugin-next',
+      'eslint-plugin-jsx-a11y',
+      'eslint-plugin-react',
+      'eslint-plugin-react-hooks',
+    ]);
 
-    ensurePackagesAreInstalled(config.requiredPackages);
-
-    return config.nextjs;
+    return (
+      require('./configs/nextjs.js') as typeof import('./configs/nextjs.js')
+    ).nextjs;
   },
   get react() {
-    const config =
-      require('./configs/react.js') as typeof import('./configs/react.js');
+    ensurePackagesAreInstalled([
+      'eslint-plugin-jsx-a11y',
+      'eslint-plugin-react',
+      'eslint-plugin-react-hooks',
+    ]);
 
-    ensurePackagesAreInstalled(config.requiredPackages);
-
-    return config.react;
+    return (
+      require('./configs/react.js') as typeof import('./configs/react.js')
+    ).react;
   },
 } as const;
 
