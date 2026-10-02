@@ -1,6 +1,6 @@
 {
   "name": "@riveo/eslint-config",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Opinionated flat ESLint config for TypeScript-first projects with JavaScript and frameworks support.",
   "main": "dist/index.js",
   "exports": {
