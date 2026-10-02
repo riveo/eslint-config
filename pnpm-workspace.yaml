@@ -10,3 +10,7 @@ allowBuilds:
 
 publicHoistPattern:
   - '*eslint-*'
+
+update:
+  ignoreDeps:
+    - typescript
