@@ -1,8 +1,11 @@
 import { importX } from 'eslint-plugin-import-x';
 import { configs as tseslint } from 'typescript-eslint';
+import { scopeParser } from '../internal/scope-parser.ts';
 import type { Config, ConfigWithExtends } from '../types.ts';
 
 const typescriptFilesGlobs = ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts'];
+
+const scopedParserFiles = ['**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}'];
 
 export const typescriptImportConfig: Config = {
   name: 'riveo/typescript-import',
@@ -20,8 +23,10 @@ export const typescriptImportConfig: Config = {
 export const typescriptConfig: ConfigWithExtends = {
   name: 'riveo/typescript',
   extends: [
-    tseslint.recommended,
-    tseslint.stylistic,
+    scopeParser(tseslint.recommended, {
+      files: scopedParserFiles,
+    }),
+    scopeParser(tseslint.stylistic, { files: scopedParserFiles }),
     importX.flatConfigs.typescript,
     typescriptImportConfig,
   ],
