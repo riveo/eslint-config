@@ -1,3 +1,9 @@
+import { readFileSync } from 'node:fs';
+
+const { peerDependencies = {} } = JSON.parse(
+  readFileSync(new URL('../../package.json', import.meta.url), 'utf8'),
+) as { peerDependencies?: Record<string, string> };
+
 export const ensurePackagesAreInstalled = (packages: string[]): void => {
   const missing = [...new Set(packages)].filter((packageName) => {
     try {
@@ -17,6 +23,21 @@ export const ensurePackagesAreInstalled = (packages: string[]): void => {
   });
 
   if (missing.length > 0) {
-    throw new Error(`Missing required packages: ${missing.join(', ')}`);
+    const installPackages = missing.map((packageName) => {
+      const version = Object.hasOwn(peerDependencies, packageName)
+        ? peerDependencies[packageName]
+        : undefined;
+
+      return version
+        ? `'${`${packageName}@${version}`.replaceAll("'", "'\\''")}'`
+        : packageName;
+    });
+
+    throw new Error(
+      [
+        `Missing required packages: ${missing.join(', ')}`,
+        `Install them: ${installPackages.join(' ')}`,
+      ].join('\n'),
+    );
   }
 };
