@@ -43,6 +43,10 @@ For TypeScript projects, also make sure `typescript` is installed in your app:
 pnpm add -D typescript
 ```
 
+Framework-specific dependencies are optional and are not installed automatically with this package.
+When you use `configs.astro`, `configs.react`, or other specific configs, missing dependencies will be reported
+so you can install the required packages in your project.
+
 ## Usage
 
 Create `eslint.config.mjs`:
