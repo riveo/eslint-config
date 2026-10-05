@@ -189,8 +189,8 @@ importers:
         version: 8.71.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
     devDependencies:
       '@next/eslint-plugin-next':
-        specifier: ^16.3.7
-        version: 16.3.7(eslint@10.11.0(supports-color@7.2.0))
+        specifier: ^16.3.8
+        version: 16.3.8(eslint@10.11.0(supports-color@7.2.0))
       '@types/eslint-plugin-jsx-a11y':
         specifier: ^6.10.1
         version: 6.10.1(supports-color@7.2.0)
@@ -216,8 +216,8 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)
       globals:
-        specifier: ^17.12.0
-        version: 17.12.0
+        specifier: ^17.13.0
+        version: 17.13.0
       prettier:
         specifier: ^3.9.9
         version: 3.9.9
@@ -264,7 +264,7 @@ importers:
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^16.3.7
-        version: 16.3.7(eslint@10.11.0(supports-color@7.2.0))
+        version: 16.3.8(eslint@10.11.0(supports-color@7.2.0))
       '@riveo/eslint-config':
         specifier: workspace:*
         version: link:../../..
@@ -349,7 +349,7 @@ importers:
         version: 10.11.0(supports-color@7.2.0)
       globals:
         specifier: ^17.12.0
-        version: 17.12.0
+        version: 17.13.0
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
@@ -1057,8 +1057,8 @@ packages:
   '@next/env@16.3.8':
     resolution: {integrity: sha512-Al9zqHVV7TJv0eFuOU4U7Lvv74PTih4Ch63sk2xCIpSTkE3udFnaOcnzP2lQVymiL7yS9Cj2iClUXlR3EQ5sEw==}
 
-  '@next/eslint-plugin-next@16.3.7':
-    resolution: {integrity: sha512-ZQwUKBxqKAasarxLHJkkIv0cuG80pJ7TKvCUcFvlKewkuzYkL+Lsxb++DQlcBnY4uT0kOazDye4j1pyDPlDcDQ==}
+  '@next/eslint-plugin-next@16.3.8':
+    resolution: {integrity: sha512-eCR9RcLTZrVS+K3+VOhi0xMdUUGNuriCHHhU1ZoABC/QQ/Gp0OWbLKQxV2/9DkmihYdYRcQWFmZXW8M1AMUXYw==}
 
   '@next/swc-darwin-arm64@16.3.8':
     resolution: {integrity: sha512-2JPRMh2nmQG5CiL7cXGL9AGwnPWJQ//cTtAUCT+w511QHk79SYz3LGv/pc5X643B/WEO0rvu3Yww0hqwt3kgeA==}
@@ -2186,8 +2186,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.12.0:
-    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
+  globals@17.13.0:
+    resolution: {integrity: sha512-RwMTC61u7hrG3ZJMkZQOK4JLJrKS8QtoTii63EmWvFXHqycY9FObBJQCbsLxSO8kjKhWE5kV1GC+Vb1g3RI0Zg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -3997,7 +3997,7 @@ snapshots:
 
   '@next/env@16.3.8': {}
 
-  '@next/eslint-plugin-next@16.3.7(eslint@10.11.0(supports-color@7.2.0))':
+  '@next/eslint-plugin-next@16.3.8(eslint@10.11.0(supports-color@7.2.0))':
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.11.0(supports-color@7.2.0))
       fast-glob: 3.3.1
@@ -5054,7 +5054,7 @@ snapshots:
       astro-eslint-parser: 3.2.0(supports-color@7.2.0)
       eslint: 10.11.0(supports-color@7.2.0)
       espree: 11.2.0
-      globals: 17.12.0
+      globals: 17.13.0
       postcss: 8.5.28
       postcss-selector-parser: 7.1.6
       synckit: 0.11.13
@@ -5073,7 +5073,7 @@ snapshots:
       astro-eslint-parser: 3.2.0(supports-color@7.2.0)
       eslint: 10.11.0(supports-color@7.2.0)
       espree: 11.2.0
-      globals: 17.12.0
+      globals: 17.13.0
       postcss: 8.5.28
       postcss-selector-parser: 7.1.6
       synckit: 0.11.13
@@ -5424,7 +5424,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.12.0: {}
+  globals@17.13.0: {}
 
   globalthis@1.0.4:
     dependencies:
